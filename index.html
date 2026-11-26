@@ -876,6 +876,13 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 #brand[data-light] .bs .pcap b{color:#1d0b12}
 #brand[data-light] .bs .pcap span{color:rgba(29,11,18,.68)}
 #brand[data-light] .bs .bsrole{color:#c93b67}
+.crvhead{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin:clamp(40px,5vw,64px) 0 18px;flex-wrap:wrap}
+.crvhead h4{font:600 22px "Inter Tight";letter-spacing:-.02em;margin:0}
+.crvhead span{color:var(--mut);font-size:14px}
+.crvgrid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.crv{display:block;color:inherit;text-decoration:none}
+.crvig{position:absolute;top:14px;right:14px;z-index:1;padding:6px 12px;border-radius:999px;font:600 12px Inter;color:#fff;background:rgba(12,4,7,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18)}
+@media(max-width:1100px) and (min-width:861px){.crvgrid .rm:nth-child(n+4){display:block}}
 </style>
 </head>
 <body>
@@ -957,6 +964,8 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
         <div class="crs glass"><b>40+</b><span>artist roster with a 3M combined following. DJ Hunny Bee, whom I recommended, has been rebooked by Apple three times</span></div>
         <div class="crs glass wide"><b>5M</b><span>combined following across OTT's creator and talent network</span></div>
       </div>
+      <div class="crvhead"><h4>Creator content</h4><span>A few posts from creators I hosted. Tap to watch on Instagram.</span></div>
+      <div class="rmgrid crvgrid"><a class="rm crv rv" href="https://www.instagram.com/reel/DdRrmgIIt-k/" target="_blank" rel="noopener" aria-label="Watch @100ways2live on Instagram"><video muted loop playsinline preload="none" poster="vid/cr_chris.jpg"><source src="vid/cr_chris.mp4" type="video/mp4"></video><span class="crvig">Watch ↗</span><figcaption><b>@100ways2live</b><span>8-year anniversary yacht party with City Cruises: "same time next year?"</span></figcaption></a><a class="rm crv rv" href="https://www.instagram.com/reel/Dc9pIyMPrl5/" target="_blank" rel="noopener" aria-label="Watch @xirimpi on Instagram"><video muted loop playsinline preload="none" poster="vid/cr_hannah.jpg"><source src="vid/cr_hannah.mp4" type="video/mp4"></video><span class="crvig">Watch ↗</span><figcaption><b>@xirimpi</b><span>Labor Day sunset cruise aboard City Cruises' San Francisco Spirit</span></figcaption></a><a class="rm crv rv" href="https://www.instagram.com/reel/DczrGG7Puy2/" target="_blank" rel="noopener" aria-label="Watch @zoegabon on Instagram"><video muted loop playsinline preload="none" poster="vid/cr_zoe.jpg"><source src="vid/cr_zoe.mp4" type="video/mp4"></video><span class="crvig">Watch ↗</span><figcaption><b>@zoegabon</b><span>Pre-event promo for the yacht party with W San Francisco</span></figcaption></a><a class="rm crv rv" href="https://www.instagram.com/reel/Dcq7mUXxtiU/" target="_blank" rel="noopener" aria-label="Watch @babylumpiia on Instagram"><video muted loop playsinline preload="none" poster="vid/cr_sarina.jpg"><source src="vid/cr_sarina.mp4" type="video/mp4"></video><span class="crvig">Watch ↗</span><figcaption><b>@babylumpiia</b><span>Product content for Nectar Collective at an OTT pool party</span></figcaption></a></div>
     </div>
   </div>
 </section>
