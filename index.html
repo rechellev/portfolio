@@ -835,6 +835,17 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 .rv.pre{opacity:0;transform:translateY(60px) scale(.98);filter:blur(8px)}
 .rv.pre.in{opacity:1;transform:none;filter:none;transition:opacity 1s ease,transform 1.2s cubic-bezier(.2,.8,.2,1),filter 1s ease}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.load{display:none}.rv.pre{opacity:1;transform:none;filter:none}.sig,.load .lg{clip-path:none}.cur,.spot{display:none}.grain{display:none}}
+.rmgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(14px,1.6vw,22px);align-items:start;padding-bottom:48px}
+.rm{position:relative;margin:0;aspect-ratio:9/16;border-radius:24px;overflow:hidden;background:var(--bg2);box-shadow:0 30px 60px -20px rgba(0,0,0,.7),0 0 0 1px var(--line);transition:transform .6s cubic-bezier(.2,.8,.2,1),box-shadow .6s}
+.rm:nth-child(even){translate:0 48px}
+.rm:hover{transform:scale(1.025);box-shadow:0 40px 80px -20px rgba(255,61,127,.35),0 0 0 1px rgba(255,61,127,.4)}
+.rm video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rm figcaption{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 18px;background:linear-gradient(180deg,transparent,rgba(12,4,7,.92));display:flex;flex-direction:column;gap:4px}
+.rm figcaption b{font-size:16px;letter-spacing:-.01em}
+.rm figcaption span{font-size:13px;line-height:1.4;color:rgba(253,242,245,.82)}
+.ba .bef img{filter:grayscale(1) contrast(1.05)}
+@media(max-width:1100px) and (min-width:861px){.rmgrid{grid-template-columns:repeat(3,minmax(0,1fr))}.rm:nth-child(n+4){display:none}}
+@media(max-width:860px){.rmgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px;margin-inline:calc(-1*max(5vw,16px));padding-inline:max(5vw,16px);scrollbar-width:none}.rmgrid::-webkit-scrollbar{display:none}.rm{flex:0 0 64vw;scroll-snap-align:center}.rm:nth-child(even){translate:none}}
 </style>
 </head>
 <body>
@@ -893,6 +904,13 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 </section>
 
 <section class="proof" aria-label="Proof"><div class="pf2stage" id="pf2"><span class="fl pf2bloom" aria-hidden="true"></span><span class="fl pf2bloom b2" aria-hidden="true"></span><div class="pf2track"><button class="pf2 on" data-i="0" aria-label="Local news"><span class="pf2l"><i class="pf2ic"></i>Local news</span><span class="pf2t">Tahoe local news named OTT's Tahoe Ski Weekend the best thing to do in Tahoe that weekend.</span></button><button class="pf2" data-i="1" aria-label="Rivian"><span class="pf2l"><i class="pf2ic"></i>Rivian</span><span class="pf2t">A Rivian activation with DJ sets powered by the vehicle, captured for content, led to two vehicle sales.</span></button><button class="pf2" data-i="2" aria-label="Partnerships"><span class="pf2l"><i class="pf2ic"></i>Partnerships</span><span class="pf2t">36 brand partners and $100K+ in sponsor revenue, including Hennessy, Red Bull, Rivian, Lucid, Google and New Balance.</span></button><button class="pf2" data-i="3" aria-label="Reposted by Kehlani"><span class="pf2l"><i class="pf2ic"></i>Reposted by Kehlani</span><span class="pf2t">Grammy-winning artist Kehlani reposted OTT campaigns.</span></button><button class="pf2" data-i="4" aria-label="Creator House"><span class="pf2l"><i class="pf2ic"></i>Creator House</span><span class="pf2t">Built OTT Creator House: 50+ Bay Area creators with a combined 2M following.</span></button><button class="pf2" data-i="5" aria-label="Talent"><span class="pf2l"><i class="pf2ic"></i>Talent</span><span class="pf2t">A 40+ artist roster with a combined 3M following. DJ Hunny Bee, whom I recommended, has been rebooked by Apple three times.</span></button><button class="pf2" data-i="6" aria-label="Press"><span class="pf2l"><i class="pf2ic"></i>Press</span><span class="pf2t">Featured in Tahoe Local News, Do The Bay, The Town Experience and Visit Oakland.</span></button><button class="pf2" data-i="7" aria-label="Brand approvals"><span class="pf2l"><i class="pf2ic"></i>Brand approvals</span><span class="pf2t">Creative reviewed and approved by Hennessy, Belvedere, Red Bull, Maker's Mark and Rivian.</span></button><button class="pf2" data-i="8" aria-label="Pre-launch"><span class="pf2l"><i class="pf2ic"></i>Pre-launch</span><span class="pf2t">Tahoe 2027 posts topped 125K views each before the campaign officially launched.</span></button></div></div><div class="pf2dots" aria-hidden="true"><i class=on></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></section>
+
+<section class="band room" id="room" aria-label="Event footage">
+  <div class="wrap">
+    <div class="head rv"><div><span class="eyebrow"><i></i>Footage from the floor</span><h2 class="grad" style="margin-top:14px">In the room</h2></div><p>Real moments from events I produced and marketed. No stock, no staging.</p></div>
+    <div class="rmgrid"><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf1.jpg" aria-label="BlendFest footage"><source src="vid/bf1.mp4" type="video/mp4"></video><figcaption><b>BlendFest</b><span>2,000+ attendees, including same-day tickets</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf2.jpg" aria-label="Brand moments footage"><source src="vid/bf2.mp4" type="video/mp4"></video><figcaption><b>Brand moments</b><span>Hennessy and coffee bars built into BlendFest</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf3.jpg" aria-label="DJ sets + sing-alongs footage"><source src="vid/bf3.mp4" type="video/mp4"></video><figcaption><b>DJ sets + sing-alongs</b><span>From a 40+ artist roster with a 3M combined following</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/room1.jpg" aria-label="The Blend tour footage"><source src="vid/room1.mp4" type="video/mp4"></video><figcaption><b>The Blend tour</b><span>Sold out in Los Angeles, Las Vegas and Oakland</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/room3.jpg" aria-label="Tahoe Ski Weekend footage"><source src="vid/room3.mp4" type="video/mp4"></video><figcaption><b>Tahoe Ski Weekend</b><span>Grew from 60 to 300+ attendees in one year</span></figcaption></figure></div>
+  </div>
+</section>
 
 <section class="band" id="about">
   <div class="wrap agrid">
@@ -1323,5 +1341,6 @@ const toast=document.getElementById('toast');
 addEventListener('load',()=>{if(window.ScrollTrigger)ScrollTrigger.refresh();});
 }
 </script>
+<script>(()=>{const vs=document.querySelectorAll('.rm video');if(!vs.length)return;const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting){v.preload='auto';v.play().catch(()=>{});}else v.pause();}),{threshold:.35});vs.forEach(v=>io.observe(v));})()</script>
 </body>
 </html>
