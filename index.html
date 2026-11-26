@@ -929,6 +929,26 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 @keyframes crvs{to{transform:translateX(calc(-50% - 8px))}}
 .crvtrack .crv{flex:0 0 clamp(200px,17vw,250px);translate:none!important}
 @media(prefers-reduced-motion:reduce){.crvtrack{animation:none}.crvmarq{overflow-x:auto}}
+.acred{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:14px}
+.acdeg{display:flex;flex-direction:column;gap:4px}
+.acdeg .dyr{font:600 11px Inter;letter-spacing:.1em;text-transform:uppercase;color:var(--hot)}
+.acdeg b{font:600 17px "Inter Tight";letter-spacing:-.01em}
+.acdeg span:last-child{font-size:13.5px;color:var(--mut);line-height:1.5}
+.acpills{display:flex;flex-wrap:wrap;gap:8px}
+.acpills span{padding:7px 12px;border-radius:999px;font:500 12.5px Inter;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.acpills .pm{border-color:rgba(255,61,127,.5);color:var(--petal)}
+.tline li.tl-hi{box-shadow:inset 0 0 0 1px rgba(255,61,127,.35);background:linear-gradient(135deg,rgba(255,61,127,.22),rgba(201,59,103,.06))}
+.bfres.bftop{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:18px}
+.bfme1{grid-template-columns:1fr}
+.bfmore{margin-top:22px;border-top:1px solid var(--line)}
+.bfmore summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:20px 0 4px}
+.bfmore summary::-webkit-details-marker{display:none}
+.bfmore summary span{font:600 17px "Inter Tight"}
+.bfmore summary em{font-style:normal;color:var(--mut);font-size:14px;flex:1}
+.bfmore summary i{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:500 20px Inter;font-style:normal;background:linear-gradient(135deg,var(--hot),var(--rasp));transition:transform .35s}
+.bfmore[open] summary i{transform:rotate(45deg)}
+.bfmore summary:hover span{color:var(--petal)}
+@media(max-width:700px){.bfres.bftop{grid-template-columns:repeat(2,minmax(0,1fr))}.bfmore summary em{display:none}}
 </style>
 </head>
 <body>
@@ -980,7 +1000,9 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 
 <section class="band" id="about">
   <div class="wrap agrid">
-    <div><span class="eyebrow rv"><i></i>About me</span><div class="ahead"><figure class="me rv"><img src="shots/me.jpg" alt="Rechelle Valere" loading="lazy" decoding="async"><figcaption><b>Rechelle Valere</b><span>Brand, marketing + web</span></figcaption></figure><p class="alead rv">I bring more than 15 years of experience in brand design, digital marketing, and web design. I create brand identities and campaign graphics, design and build websites, and manage marketing campaigns and social media accounts to grow audiences.</p></div><p class="abio rv">I sold my first piece of art before I turned ten. By twelve I was teaching myself to build websites on my first computer and marketing my first business, a travel agency called Princess Tours. I’ve been building brands ever since.</p><p class="abio rv">I trained in hyperrealistic drawing and earned my degree in business management with a concentration in marketing, so I think like an artist and plan like a strategist. That is how I take a brand from first sketch to sold-out launch, with creative approved by Hennessy, Belvedere, Red Bull, Maker’s Mark and Rivian, and campaigns for DJs like DJ Hunny Bee, Jae Murphy, DJ Puffy and DJ Umami.</p><p class="abio rv">I’m also endlessly curious about technology, and I treat new tools as part of my creative kit. It’s why I design and code my own sites, and why I built OTT Studio with AI when no marketing platform on the market did what I needed.</p><a class="btn" style="margin-top:22px" href="Rechelle_Valere_Resume.pdf" target="_blank" rel="noopener">View my résumé <span aria-hidden="true">↗</span></a></div>
+    <div><span class="eyebrow rv"><i></i>About me</span><div class="ahead"><figure class="me rv"><img src="shots/me.jpg" alt="Rechelle Valere" loading="lazy" decoding="async"><figcaption><b>Rechelle Valere</b><span>Events, brand + marketing</span></figcaption></figure><p class="alead rv">15+ years in brand design, marketing and events. I design the brand, produce the experience and build the content that sells it out.</p></div><p class="abio rv">I sold my first artwork before ten and built my first website at twelve to market my first business, Princess Tours. I trained in hyperrealistic drawing and earned a business degree in marketing, so I think like an artist and plan like a strategist, with creative approved by Hennessy, Belvedere, Red Bull, Maker’s Mark and Rivian. I also design and code my own sites, and built OTT Studio with AI when no platform did what I needed.</p>
+<div class="acred rv"><div class="acdeg"><span class="dyr">Class of 2020</span><b>B.Sc. Business Management, Concentration in Marketing</b><span>University of Massachusetts Boston · Marketing and Visuals Director, Black Student Center · Vice President, Student Government</span></div><div class="acpills"><span>Google Project Management, 2024</span><span>Apple Search Ads Certified, 2024</span><span>UI/UX Design, 2023</span><span>Wix Accessibility, 2023</span><span>Apple Certified Mac + iOS Technician</span><span class="pm">PMP, in progress</span></div></div>
+<a class="btn" style="margin-top:22px" href="Rechelle_Valere_Resume.pdf" target="_blank" rel="noopener">View my résumé <span aria-hidden="true">↗</span></a></div>
     <div class="rv">
       <ol class="tline" id="tline">
         <li><span class="tdot"></span><span class="tyr">2026 to now</span><b>510 Society</b><span>Brand identity, event marks, website and social. Nearly doubled Instagram in under six months.</span></li>
@@ -988,11 +1010,11 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
         <li><span class="tdot"></span><span class="tyr">2023 to 2025</span><b>Spirit Mas</b><span>Lead Designer. Website redesign, social assets and annual design direction for a 25,000+ person Carnival band in Trinidad.</span></li>
         <li><span class="tdot"></span><span class="tyr">2014 to 2023</span><b>2Brown Girls Co.</b><span>Creative Director. Brand identity, rebrands, websites and social for beauty, food and lifestyle clients, including Glamestic, Whipped Ori and Eko Kitchen.</span></li>
         <li><span class="tdot"></span><span class="tyr">Dec 2017 to now</span><b>Apple</b><span>Design Operations Project Manager. Planning, budgets, executive reporting and 20+ vendors for the Design org.</span></li>
+        <li class="tl-hi"><span class="tdot"></span><span class="tyr">June 2023 · Apple Park</span><b>WWDC 2023 On-Site Support</b><span>Selected for a one-week assignment supporting Developer Check-In and Developer Hospitality.</span></li>
         <li><span class="tdot"></span><span class="tyr">Age 12</span><b>Princess Tours Travel Agency</b><span>My first business, my first website and my first marketing.</span></li>
       </ol>
       
     </div>
-    <div class="edu rv"><h3>Education + credentials</h3><div class="edgrid"><div class="degree glass"><span class="dyr">Class of 2020</span><b class="grad">B.Sc. Business Management</b><span class="dmaj">Concentration in Marketing</span><span class="dsch">University of Massachusetts Boston</span><ul><li>Marketing and Visuals Director, Black Student Center</li><li>Vice President, Student Government</li></ul><span class="dart">Plus formal study in hyperrealistic drawing</span></div><div class="certs"><div class="cert glass"><span class="tico" style="background:#ffffff;color:#4285f4">G</span><div><b>Google Project Management Certificate</b><span>Google · 2024</span></div></div><div class="cert glass"><span class="tico" style="background:#1d1d1f;color:#ffffff">Ads</span><div><b>Apple Search Ads Certified</b><span>Apple · 2024</span></div></div><div class="cert glass"><span class="tico" style="background:#2a0712;color:#f5c3ce">UX</span><div><b>UI/UX Design Certificate</b><span>2023</span></div></div><div class="cert glass"><span class="tico" style="background:#0c6efc;color:#ffffff">Wx</span><div><b>Wix Accessibility Certificate</b><span>Wix · 2023</span></div></div><div class="cert glass"><span class="tico" style="background:#1d1d1f;color:#ffffff">AC</span><div><b>Apple Certified Mac + iOS Technician</b><span>ACMT, ACiT</span></div></div><div class="cert glass pmp"><span class="tico" style="background:#ff3d7f;color:#fff">PMP</span><div><b>Project Management Professional</b><span>In progress</span><i class="pbar"><i></i></i></div></div></div></div></div>
   </div>
 </section>
 
@@ -1002,7 +1024,9 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
     <div class="rmgrid"><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf1.jpg" aria-label="BlendFest footage"><source src="vid/bf1.mp4" type="video/mp4"></video><figcaption><b>BlendFest</b><span>2,000+ attendees, including same-day tickets</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf2.jpg" aria-label="Brand moments footage"><source src="vid/bf2.mp4" type="video/mp4"></video><figcaption><b>Brand moments</b><span>Hennessy and coffee bars built into BlendFest</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf3.jpg" aria-label="DJ sets + sing-alongs footage"><source src="vid/bf3.mp4" type="video/mp4"></video><figcaption><b>DJ sets + sing-alongs</b><span>From a 40+ artist roster with a 3M combined following</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/room1.jpg" aria-label="The Blend tour footage"><source src="vid/room1.mp4" type="video/mp4"></video><figcaption><b>The Blend tour</b><span>Sold out in Los Angeles, Las Vegas and Oakland</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/room3.jpg" aria-label="Tahoe Ski Weekend footage"><source src="vid/room3.mp4" type="video/mp4"></video><figcaption><b>Tahoe Ski Weekend</b><span>Grew from 60 to 300+ attendees in one year</span></figcaption></figure></div>
   <div class="bfc rv" id="blendfest">
       <div class="bfchead"><div><span class="eyebrow"><i></i>Case study</span><h3>BlendFest 2026, start to finish</h3></div><p>OTT's first festival-scale event: a coffee and R&amp;B day festival presented by Hennessy at The Bridge Yard in Oakland, headlined by DJ Jae Murphy. I was VIP &amp; Guest Experience Lead on a core team of five.</p></div>
-      <div class="bfchips"><span>Aug 15, 2026</span><span>The Bridge Yard, Oakland</span><span>2,000+ attendees, including same-day tickets</span><span>8 vendor partners</span><span>5 leads, ~70 crew, vendors + artists</span></div>
+      <div class="bfchips"><span>Aug 15, 2026</span><span>The Bridge Yard, Oakland</span><span>Presented by Hennessy</span><span>8 vendor partners</span><span>5 leads, ~70 crew, vendors + artists</span></div>
+      <div class="bfres bftop"><div><b>2,000+</b><span>attendees, including same-day tickets</span></div><div><b>1M+</b><span>views from creator content</span></div><div><b>500K+</b><span>impressions from the Belvedere activation</span></div><div><b>2M</b><span>social impressions</span></div></div>
+      <details class="bfmore"><summary><span>See how we ran it</span><em>Team, planning, guest flow, show day and debrief</em><i aria-hidden="true">+</i></summary>
       <div class="bfstep"><b>01</b><h4>The team</h4></div>
       <div class="bflanes"><div class="bfl glass"><b>Event operations</b><span>Venue, vendors, door and site safety</span></div><div class="bfl glass"><b>Talent + stage</b><span>Main stage, green room, performers</span></div><div class="bfl glass mine"><em>My lane</em><b>VIP + guest experience</b><span>VIP lounge, hosted bar, brand activations and content capture</span></div><div class="bfl glass"><b>AV + technical</b><span>Production, audio and stage technicals</span></div><div class="bfl glass"><b>Programming + lounge</b><span>Blend Sessions stage and lounge flow</span></div></div>
       <div class="bfstep"><b>02</b><h4>What we built before doors</h4></div>
@@ -1013,12 +1037,13 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
       <div class="bfstep"><b>04</b><h4>Show day, load-in to strike</h4></div>
       <div class="bftl"><div class="bft"><b>5:00 AM</b><span>Heavy AV and stage load-in</span></div><div class="bft"><b>7:00</b><span>Airstream bars placed</span></div><div class="bft"><b>7:30</b><span>Vendor and F&amp;B load-in</span></div><div class="bft"><b>8:15</b><span>All-hands sync and radio check</span></div><div class="bft"><b>9:00</b><span>Final walkthrough</span></div><div class="bft"><b>10:00</b><span>Doors open</span></div><div class="bft"><b>2:30 PM</b><span>Sing-along contest</span></div><div class="bft"><b>2:50</b><span>Jae Murphy headline set</span></div><div class="bft"><b>3:30</b><span>Last call</span></div><div class="bft"><b>4:00</b><span>Close and exit flow</span></div><div class="bft"><b>4:15–7:00</b><span>Load-out, venue clear</span></div></div>
       <div class="bfstep"><b>05</b><h4>My lane: VIP + guest experience</h4></div>
-      <div class="bfme">
+      <div class="bfme bfme1">
         <ul><li>Ran the VIP lounge with a hosted Teremana coffee cocktail bar and a 2-person VIP team</li><li>Brand activations with Hennessy, Belvedere Dirty Brew and Teremana built into the guest journey</li><li>Content capture plan: photographer, recap and BTS videography, plus creators hosted for exclusive moments</li><li>Experiential design for the day: branded entrance, DJ booth facade, photo wall, florals and live painting</li></ul>
-        <div class="bfres"><div><b>2,000+</b><span>attendees, including same-day tickets</span></div><div><b>1M+</b><span>views from creator content</span></div><div><b>500K+</b><span>impressions from the Belvedere activation</span></div><div><b>2M</b><span>social impressions</span></div></div>
+        
       </div>
       <div class="bfstep"><b>06</b><h4>The debrief</h4></div>
       <p class="bflearn">After the event we reconciled the budget and ran close-out meetings with the venue, bar partner and sponsors. What we're carrying into 2027: tighter rideshare and arrival coordination with the venue, bar staffing planned by station with throughput targets, ticket holds aligned to flow capacity, and one point of contact for every sponsor.</p>
+      </details>
     </div>
 
     <div class="crt rv">
