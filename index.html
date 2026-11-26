@@ -883,6 +883,46 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
 .crv{display:block;color:inherit;text-decoration:none}
 .crvig{position:absolute;top:14px;right:14px;z-index:1;padding:6px 12px;border-radius:999px;font:600 12px Inter;color:#fff;background:rgba(12,4,7,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18)}
 @media(max-width:1100px) and (min-width:861px){.crvgrid .rm:nth-child(n+4){display:block}}
+.bfc{margin-top:clamp(64px,8vw,110px);padding:clamp(24px,3vw,44px);border-radius:32px;background:linear-gradient(160deg,rgba(255,61,127,.10),rgba(255,255,255,.02));border:1px solid var(--line)}
+.bfchead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:24px;align-items:end}
+.bfchead h3{font:600 clamp(30px,3.4vw,48px)/1.02 "Inter Tight";letter-spacing:-.035em;margin:12px 0 0}
+.bfchead p{margin:0;color:var(--mut);font-size:16px;line-height:1.55}
+.bfchips{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 8px}
+.bfchips span{padding:8px 14px;border-radius:999px;font:500 13px Inter;background:rgba(255,255,255,.06);border:1px solid var(--line)}
+.bfstep{display:flex;align-items:baseline;gap:14px;margin:clamp(30px,3.6vw,46px) 0 14px}
+.bfstep b{font:600 13px Inter;color:var(--hot);letter-spacing:.08em}
+.bfstep h4{margin:0;font:600 20px "Inter Tight";letter-spacing:-.02em}
+.bflanes{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.bfl{border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:6px;position:relative}
+.bfl b{font-size:15px}.bfl span{font-size:13.5px;line-height:1.45;color:var(--mut)}
+.bfl.mine{background:linear-gradient(160deg,rgba(255,61,127,.35),rgba(201,59,103,.12));border-color:rgba(255,61,127,.5);box-shadow:0 20px 50px -20px rgba(255,61,127,.5)}
+.bfl.mine span{color:rgba(253,242,245,.9)}
+.bfl em{font:600 11px Inter;letter-spacing:.08em;text-transform:uppercase;color:#fff;font-style:normal;opacity:.85}
+.bfdocs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.bfd{border-radius:20px;padding:18px 18px 18px 50px;position:relative;display:flex;flex-direction:column;gap:5px}
+.bfd i{position:absolute;left:18px;top:20px;width:18px;height:22px;border-radius:4px;border:1.5px solid var(--petal);background:linear-gradient(180deg,transparent 30%,rgba(245,195,206,.25) 30%,rgba(245,195,206,.25) 38%,transparent 38%,transparent 52%,rgba(245,195,206,.25) 52%,rgba(245,195,206,.25) 60%,transparent 60%)}
+.bfd b{font-size:15px}.bfd span{font-size:13.5px;line-height:1.45;color:var(--mut)}
+.bfflow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:f}
+.bff{position:relative;padding:16px 16px 16px 16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid var(--line);font-size:14px;line-height:1.35;display:flex;flex-direction:column;gap:8px}
+.bff span{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font:600 12px Inter;background:linear-gradient(135deg,var(--hot),var(--rasp))}
+.bff:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;translate:0 -50%;color:var(--petal);font-size:14px;z-index:1}
+.bfnote{margin:12px 0 0;color:var(--mut);font-size:14px}
+.bftl{display:flex;gap:0;overflow-x:auto;padding:24px 4px 6px;position:relative;scrollbar-width:thin}
+.bftl::before{content:"";position:absolute;left:0;right:0;top:30px;height:2px;background:linear-gradient(90deg,var(--hot),var(--rasp),transparent)}
+.bft{flex:1 1 0;min-width:108px;position:relative;padding:22px 14px 0 0}
+.bft::before{content:"";position:absolute;left:0;top:0;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--hot);box-shadow:0 0 12px var(--hot)}
+.bft b{display:block;font:600 13.5px Inter;color:var(--petal)}.bft span{display:block;font-size:13px;line-height:1.4;margin-top:4px}
+.bfme{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:20px;align-items:start}
+.bfme ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.bfme li{position:relative;padding-left:22px;font-size:15px;line-height:1.5;color:rgba(253,242,245,.88)}
+.bfme li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--hot);box-shadow:0 0 10px var(--hot)}
+.bfres{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.bfres div{padding:16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid var(--line)}
+.bfres b{display:block;font:600 30px/1 "Inter Tight";letter-spacing:-.03em;background:linear-gradient(180deg,#fff,var(--petal));-webkit-background-clip:text;background-clip:text;color:transparent}
+.bfres span{display:block;font-size:13px;color:var(--mut);margin-top:6px;line-height:1.35}
+.bflearn{margin:0;max-width:78ch;font-size:15.5px;line-height:1.6;color:rgba(253,242,245,.86)}
+@media(max-width:1000px){.bflanes{grid-template-columns:repeat(2,minmax(0,1fr))}.bfl.mine{grid-column:span 2}.bfdocs{grid-template-columns:repeat(2,minmax(0,1fr))}.bfflow{grid-template-columns:1fr}.bff{flex-direction:row;align-items:center}.bff:not(:last-child)::after{content:"↓";right:auto;left:28px;top:auto;bottom:-14px;translate:none}.bfchead,.bfme{grid-template-columns:1fr}}
+@media(max-width:600px){.bfdocs{grid-template-columns:1fr}.bflanes{grid-template-columns:1fr}.bfl.mine{grid-column:auto}}
 </style>
 </head>
 <body>
@@ -954,7 +994,28 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;paddin
   <div class="wrap">
     <div class="head rv"><div><span class="eyebrow"><i></i>In the room</span><h2 class="grad" style="margin-top:14px">Event production</h2></div><p>Real moments from events I produced and marketed. No stock, no staging.</p></div>
     <div class="rmgrid"><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf1.jpg" aria-label="BlendFest footage"><source src="vid/bf1.mp4" type="video/mp4"></video><figcaption><b>BlendFest</b><span>2,000+ attendees, including same-day tickets</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf2.jpg" aria-label="Brand moments footage"><source src="vid/bf2.mp4" type="video/mp4"></video><figcaption><b>Brand moments</b><span>Hennessy and coffee bars built into BlendFest</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/bf3.jpg" aria-label="DJ sets + sing-alongs footage"><source src="vid/bf3.mp4" type="video/mp4"></video><figcaption><b>DJ sets + sing-alongs</b><span>From a 40+ artist roster with a 3M combined following</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/room1.jpg" aria-label="The Blend tour footage"><source src="vid/room1.mp4" type="video/mp4"></video><figcaption><b>The Blend tour</b><span>Sold out in Los Angeles, Las Vegas and Oakland</span></figcaption></figure><figure class="rm rv"><video muted loop playsinline preload="none" poster="vid/room3.jpg" aria-label="Tahoe Ski Weekend footage"><source src="vid/room3.mp4" type="video/mp4"></video><figcaption><b>Tahoe Ski Weekend</b><span>Grew from 60 to 300+ attendees in one year</span></figcaption></figure></div>
-  <div class="crt rv">
+  <div class="bfc rv" id="blendfest">
+      <div class="bfchead"><div><span class="eyebrow"><i></i>Case study</span><h3>BlendFest 2026, start to finish</h3></div><p>OTT's first festival-scale event: a coffee and R&amp;B day festival presented by Hennessy at The Bridge Yard in Oakland, headlined by DJ Jae Murphy. I was VIP &amp; Guest Experience Lead on a core team of five.</p></div>
+      <div class="bfchips"><span>Aug 15, 2026</span><span>The Bridge Yard, Oakland</span><span>2,000+ attendees, including same-day tickets</span><span>8 vendor partners</span><span>5 leads, ~70 crew, vendors + artists</span></div>
+      <div class="bfstep"><b>01</b><h4>The team</h4></div>
+      <div class="bflanes"><div class="bfl glass"><b>Event operations</b><span>Venue, vendors, door and site safety</span></div><div class="bfl glass"><b>Talent + stage</b><span>Main stage, green room, performers</span></div><div class="bfl glass mine"><em>My lane</em><b>VIP + guest experience</b><span>VIP lounge, hosted bar, brand activations and content capture</span></div><div class="bfl glass"><b>AV + technical</b><span>Production, audio and stage technicals</span></div><div class="bfl glass"><b>Programming + lounge</b><span>Blend Sessions stage and lounge flow</span></div></div>
+      <div class="bfstep"><b>02</b><h4>What we built before doors</h4></div>
+      <div class="bfdocs"><div class="bfd glass"><i></i><b>Safety + operations plan</b><span>Capacity limits, ID and wristband flow, alcohol controls, evacuation routes</span></div><div class="bfd glass"><i></i><b>Escalation protocol</b><span>Who decides what, from minor issues to medical and security incidents</span></div><div class="bfd glass"><i></i><b>Parking + transportation</b><span>Rideshare zones, vendor lot, approach and arrival flow</span></div><div class="bfd glass"><i></i><b>Vendor power plan</b><span>Power needs mapped per vendor against the venue electrical layout</span></div><div class="bfd glass"><i></i><b>Load-in schedule</b><span>Gate assignments and timed windows for every vendor and production team</span></div><div class="bfd glass"><i></i><b>Guest experience staffing</b><span>Two staff tracks, door and floor, with clear done-when checklists</span></div></div>
+      <div class="bfstep"><b>03</b><h4>Guest arrival flow</h4></div>
+      <div class="bfflow"><div class="bff"><span>1</span>ID + 21+ check</div><div class="bff"><span>2</span>Wristband: cream GA, brown VIP</div><div class="bff"><span>3</span>Bag check</div><div class="bff"><span>4</span>Ticket scan, VIP express lane</div><div class="bff"><span>5</span>On the floor</div></div>
+      <p class="bfnote">Live capacity tracked from door scans minus exits, switching to one-in, one-out at 95%.</p>
+      <div class="bfstep"><b>04</b><h4>Show day, load-in to strike</h4></div>
+      <div class="bftl"><div class="bft"><b>5:00 AM</b><span>Heavy AV and stage load-in</span></div><div class="bft"><b>7:00</b><span>Airstream bars placed</span></div><div class="bft"><b>7:30</b><span>Vendor and F&amp;B load-in</span></div><div class="bft"><b>8:15</b><span>All-hands sync and radio check</span></div><div class="bft"><b>9:00</b><span>Final walkthrough</span></div><div class="bft"><b>10:00</b><span>Doors open</span></div><div class="bft"><b>2:30 PM</b><span>Sing-along contest</span></div><div class="bft"><b>2:50</b><span>Jae Murphy headline set</span></div><div class="bft"><b>3:30</b><span>Last call</span></div><div class="bft"><b>4:00</b><span>Close and exit flow</span></div><div class="bft"><b>4:15–7:00</b><span>Load-out, venue clear</span></div></div>
+      <div class="bfstep"><b>05</b><h4>My lane: VIP + guest experience</h4></div>
+      <div class="bfme">
+        <ul><li>Ran the VIP lounge with a hosted Teremana coffee cocktail bar and a 2-person VIP team</li><li>Brand activations with Hennessy, Belvedere Dirty Brew and Teremana built into the guest journey</li><li>Content capture plan: photographer, recap and BTS videography, plus creators hosted for exclusive moments</li><li>Experiential design for the day: branded entrance, DJ booth facade, photo wall, florals and live painting</li></ul>
+        <div class="bfres"><div><b>2,000+</b><span>attendees, including same-day tickets</span></div><div><b>1M+</b><span>views from creator content</span></div><div><b>500K+</b><span>impressions from the Belvedere activation</span></div><div><b>2M</b><span>social impressions</span></div></div>
+      </div>
+      <div class="bfstep"><b>06</b><h4>The debrief</h4></div>
+      <p class="bflearn">After the event we reconciled the budget and ran close-out meetings with the venue, bar partner and sponsors. What we're carrying into 2027: tighter rideshare and arrival coordination with the venue, bar staffing planned by station with throughput targets, ticket holds aligned to flow capacity, and one point of contact for every sponsor.</p>
+    </div>
+
+    <div class="crt rv">
       <div class="crthead"><div><span class="eyebrow"><i></i>Creator + talent programs</span><h3>OTT Creator House</h3></div><p>50+ repeat Bay Area creators with a combined 2M following. I brief them on the brand experience, then give them freedom to create, supporting wherever they ask.</p></div>
       <div class="crtgrid">
         <div class="crs glass big"><b>1M+</b><span>views from creator content at BlendFest, across multiple brands</span></div>
