@@ -1192,6 +1192,24 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
 .a3facts span{font-size:13px;line-height:1.35}
 @media(max-width:1100px){.a3facts{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:760px){.a3frame{transform:rotate(-5deg) translate(-8px,6px)}}
+
+/* About mobile fix */
+.about3{padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+@media(max-width:860px){
+ .a3pin{padding:72px 0 56px!important}
+ .a3grid{gap:40px!important}
+ .a3pic{max-width:none!important;width:calc(100% - 28px);aspect-ratio:1/1;max-height:none;margin:0 auto 0 14px}
+ .a3pic img{object-position:50% 22%}
+ .a3bloom{width:120%;left:-10%;top:-12%}
+ .a3stmt{font-size:clamp(23px,6.4vw,30px)!important;line-height:1.22!important}
+ .a3facts{gap:10px!important;margin-top:28px!important}
+ .a3facts div.glass{padding:15px 14px 16px!important;border-radius:16px}
+ .a3facts div.glass::before{left:14px;right:14px}
+ .a3facts em{font-size:10.5px;margin-bottom:4px}
+ .a3facts b{font-size:15.5px!important}
+ .a3facts span{font-size:12px}
+ .a3btn{width:100%;justify-content:center}
+}
 </style>
 </head>
 <body>
@@ -1247,7 +1265,7 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
       <figure class="a3pic"><span class="fl a3bloom" aria-hidden="true"></span><span class="a3frame" aria-hidden="true"></span><img src="shots/me.jpg" alt="Rechelle Valere" loading="lazy" decoding="async"></figure>
       <div class="a3txt">
         <span class="eyebrow"><i></i>About me</span>
-        <p class="a3stmt" aria-label="I bring a combined 10+ years in brand design, marketing and events. I sold my first artwork before ten and built my first website at twelve. Today I produce events, creator experiences and the brands behind them, with creative approved by Hennessy, Belvedere, Red Bull, Maker’s Mark and Rivian. I think like an artist and plan like a strategist."><span aria-hidden="true"><span class="a3w">I</span> <span class="a3w">bring</span> <span class="a3w">a</span> <span class="a3w">combined</span> <span class="a3w">10+</span> <span class="a3w">years</span> <span class="a3w">in</span> <span class="a3w">brand</span> <span class="a3w">design,</span> <span class="a3w">marketing</span> <span class="a3w">and</span> <span class="a3w">events.</span> <span class="a3w">I</span> <span class="a3w">sold</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">artwork</span> <span class="a3w">before</span> <span class="a3w">ten</span> <span class="a3w">and</span> <span class="a3w">built</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">website</span> <span class="a3w">at</span> <span class="a3w">twelve.</span> <span class="a3w">Today</span> <span class="a3w">I</span> <span class="a3w">produce</span> <span class="a3w hl">events,</span> <span class="a3w hl">creator</span> <span class="a3w hl">experiences</span> <span class="a3w">and</span> <span class="a3w">the</span> <span class="a3w hl">brands</span> <span class="a3w">behind</span> <span class="a3w">them,</span> <span class="a3w">with</span> <span class="a3w">creative</span> <span class="a3w">approved</span> <span class="a3w">by</span> <span class="a3w">Hennessy,</span> <span class="a3w">Belvedere,</span> <span class="a3w">Red</span> <span class="a3w">Bull,</span> <span class="a3w">Maker’s</span> <span class="a3w">Mark</span> <span class="a3w">and</span> <span class="a3w">Rivian.</span> <span class="a3w">I</span> <span class="a3w">think</span> <span class="a3w">like</span> <span class="a3w">an</span> <span class="a3w hl">artist</span> <span class="a3w">and</span> <span class="a3w">plan</span> <span class="a3w">like</span> <span class="a3w">a</span> <span class="a3w hl">strategist.</span> </span></p>
+        <p class="a3stmt" aria-label="I bring a combined 10+ years in brand design, marketing and events. I sold my first artwork before ten and built my first website at twelve. Today I produce events, creator experiences and the brands behind them. I think like an artist and plan like a strategist."><span aria-hidden="true"><span class="a3w">I</span> <span class="a3w">bring</span> <span class="a3w">a</span> <span class="a3w">combined</span> <span class="a3w">10+</span> <span class="a3w">years</span> <span class="a3w">in</span> <span class="a3w">brand</span> <span class="a3w">design,</span> <span class="a3w">marketing</span> <span class="a3w">and</span> <span class="a3w">events.</span> <span class="a3w">I</span> <span class="a3w">sold</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">artwork</span> <span class="a3w">before</span> <span class="a3w">ten</span> <span class="a3w">and</span> <span class="a3w">built</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">website</span> <span class="a3w">at</span> <span class="a3w">twelve.</span> <span class="a3w">Today</span> <span class="a3w">I</span> <span class="a3w">produce</span> <span class="a3w hl">events,</span> <span class="a3w hl">creator</span> <span class="a3w hl">experiences</span> <span class="a3w">and</span> <span class="a3w">the</span> <span class="a3w hl">brands</span> <span class="a3w">behind</span> <span class="a3w">them.</span> <span class="a3w">I</span> <span class="a3w">think</span> <span class="a3w">like</span> <span class="a3w">an</span> <span class="a3w hl">artist</span> <span class="a3w">and</span> <span class="a3w">plan</span> <span class="a3w">like</span> <span class="a3w">a</span> <span class="a3w hl">strategist.</span> </span></p>
         <div class="a3facts"><div class="glass"><em>2024 to now</em><b>Over The Top</b><span>Director, Branding &amp; Event Marketing</span></div><div class="glass"><em>2017 to now</em><b>Apple</b><span>Design Operations PM</span></div><div class="glass"><em>June 2023</em><b>WWDC</b><span>On-site hospitality</span></div><div class="glass"><em>2026 to now</em><b>510 Society</b><span>Creative Director</span></div></div>
         <a class="btn hot a3btn" href="Rechelle_Valere_Resume.pdf" target="_blank" rel="noopener">View my résumé <span aria-hidden="true">↗</span></a>
       </div>
