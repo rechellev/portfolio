@@ -1177,6 +1177,21 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
 @keyframes orb2{to{transform:translate(-16vw,-18vh) scale(.9)}}
 .tilt3d{transition:transform .5s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d;will-change:transform}
 @media(prefers-reduced-motion:reduce){.grain,.orbs i{animation:none}}
+
+/* About v4: image + facts */
+.a3pic{aspect-ratio:4/5;isolation:isolate}
+.a3pic img{border-radius:28px!important;position:relative;z-index:2}
+.a3frame{position:absolute;inset:0;z-index:1;border-radius:30px;background:linear-gradient(140deg,var(--hot),var(--rasp) 55%,#5c0f30);transform:rotate(-5deg) translate(-14px,10px);box-shadow:0 40px 90px -30px rgba(255,61,139,.55)}
+.a3frame::after{content:"";position:absolute;inset:1px;border-radius:29px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.08) 0 2px,transparent 2px 14px)}
+.a3bloom{z-index:0!important}
+.a3facts{border-top:0!important;gap:12px;grid-template-columns:repeat(4,minmax(0,1fr))!important}
+.a3facts div.glass{padding:18px 18px 20px!important;border-radius:20px;border:1px solid rgba(255,199,217,.14);background:linear-gradient(160deg,rgba(255,61,139,.12),rgba(255,255,255,.03));gap:4px!important;position:relative;overflow:hidden}
+.a3facts div.glass::before{content:"";position:absolute;left:18px;right:18px;top:0;height:2px;border-radius:2px;background:linear-gradient(90deg,var(--petal),var(--hot));opacity:.8}
+.a3facts em{font:600 11.5px Inter;font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:var(--hot);margin-bottom:6px}
+.a3facts b{font:600 17px "Inter Tight"!important}
+.a3facts span{font-size:13px;line-height:1.35}
+@media(max-width:1100px){.a3facts{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:760px){.a3frame{transform:rotate(-5deg) translate(-8px,6px)}}
 </style>
 </head>
 <body>
@@ -1220,7 +1235,7 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
     <div class="sx glass"><b data-n="5" data-f="x">5x</b><span>OTT's Instagram in one year, 4K to 20K</span></div>
     <div class="sx glass"><b data-n="2000000" data-f="m">2M+</b><span>views in OTT's peak months on Instagram</span></div>
     <div class="sx glass"><b data-n="20" data-f="i+">20+</b><span>sold-out events across the brands I've worked with</span></div>
-    <div class="sx glass"><b data-n="15" data-f="i+">15+</b><span>years building brands, campaigns and websites</span></div>
+    <div class="sx glass"><b data-n="10" data-f="i+">10+</b><span>combined years in brand, marketing and events</span></div>
   </div>
 </section>
 
@@ -1229,11 +1244,11 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
 <section class="about3" id="about">
   <div class="a3pin">
     <div class="wrap a3grid">
-      <figure class="a3pic"><span class="fl a3bloom" aria-hidden="true"></span><img src="shots/me.jpg" alt="Rechelle Valere" loading="lazy" decoding="async"></figure>
+      <figure class="a3pic"><span class="fl a3bloom" aria-hidden="true"></span><span class="a3frame" aria-hidden="true"></span><img src="shots/me.jpg" alt="Rechelle Valere" loading="lazy" decoding="async"></figure>
       <div class="a3txt">
         <span class="eyebrow"><i></i>About me</span>
-        <p class="a3stmt" aria-label="I’ve spent 15+ years in brand design, marketing and events. I sold my first artwork before ten and built my first website at twelve. Today I produce events, creator experiences and the brands behind them, with creative approved by Hennessy, Belvedere, Red Bull, Maker’s Mark and Rivian. I think like an artist and plan like a strategist."><span aria-hidden="true"><span class="a3w">I’ve</span> <span class="a3w">spent</span> <span class="a3w">15+</span> <span class="a3w">years</span> <span class="a3w">in</span> <span class="a3w">brand</span> <span class="a3w">design,</span> <span class="a3w">marketing</span> <span class="a3w">and</span> <span class="a3w">events.</span> <span class="a3w">I</span> <span class="a3w">sold</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">artwork</span> <span class="a3w">before</span> <span class="a3w">ten</span> <span class="a3w">and</span> <span class="a3w">built</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">website</span> <span class="a3w">at</span> <span class="a3w">twelve.</span> <span class="a3w">Today</span> <span class="a3w">I</span> <span class="a3w">produce</span> <span class="a3w hl">events,</span> <span class="a3w hl">creator</span> <span class="a3w hl">experiences</span> <span class="a3w">and</span> <span class="a3w">the</span> <span class="a3w hl">brands</span> <span class="a3w">behind</span> <span class="a3w">them,</span> <span class="a3w">with</span> <span class="a3w">creative</span> <span class="a3w">approved</span> <span class="a3w">by</span> <span class="a3w">Hennessy,</span> <span class="a3w">Belvedere,</span> <span class="a3w">Red</span> <span class="a3w">Bull,</span> <span class="a3w">Maker’s</span> <span class="a3w">Mark</span> <span class="a3w">and</span> <span class="a3w">Rivian.</span> <span class="a3w">I</span> <span class="a3w">think</span> <span class="a3w">like</span> <span class="a3w">an</span> <span class="a3w hl">artist</span> <span class="a3w">and</span> <span class="a3w">plan</span> <span class="a3w">like</span> <span class="a3w">a</span> <span class="a3w hl">strategist.</span> </span></p>
-        <div class="a3facts"><div><b>Apple</b><span>since 2017</span></div><div><b>WWDC 2023</b><span>on-site hospitality</span></div><div><b>510 Society</b><span>Creative Director</span></div><div><b>UMass Boston</b><span>B.Sc., 2020</span></div></div>
+        <p class="a3stmt" aria-label="I bring a combined 10+ years in brand design, marketing and events. I sold my first artwork before ten and built my first website at twelve. Today I produce events, creator experiences and the brands behind them, with creative approved by Hennessy, Belvedere, Red Bull, Maker’s Mark and Rivian. I think like an artist and plan like a strategist."><span aria-hidden="true"><span class="a3w">I</span> <span class="a3w">bring</span> <span class="a3w">a</span> <span class="a3w">combined</span> <span class="a3w">10+</span> <span class="a3w">years</span> <span class="a3w">in</span> <span class="a3w">brand</span> <span class="a3w">design,</span> <span class="a3w">marketing</span> <span class="a3w">and</span> <span class="a3w">events.</span> <span class="a3w">I</span> <span class="a3w">sold</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">artwork</span> <span class="a3w">before</span> <span class="a3w">ten</span> <span class="a3w">and</span> <span class="a3w">built</span> <span class="a3w">my</span> <span class="a3w">first</span> <span class="a3w">website</span> <span class="a3w">at</span> <span class="a3w">twelve.</span> <span class="a3w">Today</span> <span class="a3w">I</span> <span class="a3w">produce</span> <span class="a3w hl">events,</span> <span class="a3w hl">creator</span> <span class="a3w hl">experiences</span> <span class="a3w">and</span> <span class="a3w">the</span> <span class="a3w hl">brands</span> <span class="a3w">behind</span> <span class="a3w">them,</span> <span class="a3w">with</span> <span class="a3w">creative</span> <span class="a3w">approved</span> <span class="a3w">by</span> <span class="a3w">Hennessy,</span> <span class="a3w">Belvedere,</span> <span class="a3w">Red</span> <span class="a3w">Bull,</span> <span class="a3w">Maker’s</span> <span class="a3w">Mark</span> <span class="a3w">and</span> <span class="a3w">Rivian.</span> <span class="a3w">I</span> <span class="a3w">think</span> <span class="a3w">like</span> <span class="a3w">an</span> <span class="a3w hl">artist</span> <span class="a3w">and</span> <span class="a3w">plan</span> <span class="a3w">like</span> <span class="a3w">a</span> <span class="a3w hl">strategist.</span> </span></p>
+        <div class="a3facts"><div class="glass"><em>2024 to now</em><b>Over The Top</b><span>Director, Branding &amp; Event Marketing</span></div><div class="glass"><em>2017 to now</em><b>Apple</b><span>Design Operations PM</span></div><div class="glass"><em>June 2023</em><b>WWDC</b><span>On-site hospitality</span></div><div class="glass"><em>2026 to now</em><b>510 Society</b><span>Creative Director</span></div></div>
         <a class="btn hot a3btn" href="Rechelle_Valere_Resume.pdf" target="_blank" rel="noopener">View my résumé <span aria-hidden="true">↗</span></a>
       </div>
     </div>
@@ -1390,7 +1405,7 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
 
 <section class="band" id="studio">
   <div class="wrap">
-    <div class="head rv"><div><span class="eyebrow"><i></i>OTT Studio, designed and built by me</span><h2 class="grad" style="margin-top:14px">AI tools</h2></div><p class="whyp lead"><b>Why I built it.</b> None of the marketing tools out there did everything I needed, and juggling a stack of apps still left gaps. I love how the Apple ecosystem just works, with everything connected in one place, and I wanted that for marketing: <em>one tool where I can see everything, live.</em> So I designed and built it myself.</p></div>
+    <div class="head rv"><div><span class="eyebrow"><i></i>OTT Studio, designed and built by me</span><h2 class="grad" style="margin-top:14px">AI tools</h2></div><p class="whyp lead"><b>Why I built it.</b> None of the marketing tools out there did everything I needed, and juggling a stack of apps still left gaps. I wanted <em>one tool where I can see everything, live.</em> So I designed and built it myself.</p></div>
     <div class="wt rv" id="wt">
       <div class="wtapp">
         <div class="bbar"><i></i><i></i><i></i><span>experienceott.github.io/marketing</span><b class="wtlive"><em></em>Walkthrough</b></div>
