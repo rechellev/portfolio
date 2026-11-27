@@ -1128,6 +1128,55 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
 .crs.big::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,rgba(14,6,9,.1),rgba(14,6,9,.85))}
 .crs.big b,.crs.big span{position:relative;z-index:1}
 .glamimg img{filter:contrast(1.15) saturate(1.1)}
+
+/* Studio walkthrough player */
+.wt{margin-top:clamp(28px,3vw,44px)}
+.wtapp{position:relative;border-radius:24px;overflow:hidden;background:#fff;box-shadow:0 60px 120px -40px rgba(0,0,0,.9),0 0 0 1px rgba(255,255,255,.12),0 0 80px -20px rgba(255,61,139,.35)}
+.wtapp .bbar{position:relative;z-index:3}
+.wtlive{margin-left:auto;display:flex;align-items:center;gap:7px;font:600 11.5px Inter;color:#d81b6a;letter-spacing:.04em;text-transform:uppercase}
+.wtlive em{width:8px;height:8px;border-radius:50%;background:#ff3d8b;animation:pulse 1.4s ease-in-out infinite}
+.wt.paused .wtlive em{animation:none;opacity:.4}
+.wtstage{position:relative;aspect-ratio:16/9;overflow:hidden;background:#f4f2f5}
+.wtstage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top left;opacity:0;transform:scale(1);transition:opacity .9s ease}
+.wtstage img.on{opacity:1;animation:wtzoom 6.2s cubic-bezier(.3,.1,.3,1) forwards}
+.wt.paused .wtstage img.on{animation-play-state:paused}
+@keyframes wtzoom{from{transform:scale(1)}to{transform:scale(1.14)}}
+.wtpin{position:absolute;z-index:3;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:#ff3d8b;box-shadow:0 0 0 6px rgba(255,61,139,.25);opacity:0;transform:scale(.4);transition:opacity .4s,transform .5s cubic-bezier(.2,1.4,.4,1),left .6s,top .6s}
+.wtpin::after{content:"";position:absolute;inset:-10px;border-radius:50%;border:2px solid #ff3d8b;animation:wtring 1.6s ease-out infinite}
+@keyframes wtring{from{transform:scale(.6);opacity:1}to{transform:scale(1.8);opacity:0}}
+.wtpin.in{opacity:1;transform:scale(1)}
+.wtcall{position:absolute;z-index:3;max-width:min(380px,40%);display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:18px;background:rgba(18,8,12,.82);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,199,217,.25);box-shadow:0 30px 60px -20px rgba(0,0,0,.7);color:#fdf2f5;opacity:0;transform:translateY(14px) scale(.96);transition:opacity .5s,transform .6s cubic-bezier(.2,1.2,.4,1),left .6s,top .6s}
+.wtcall.in{opacity:1;transform:none}
+.wtnum{flex:none;font:700 13px Inter;color:#fff;background:linear-gradient(135deg,var(--hot),var(--rasp));border-radius:10px;padding:6px 8px}
+.wtcall b{display:block;font:600 17px "Inter Tight";letter-spacing:-.01em;margin-bottom:4px}
+.wtcall p{margin:0;font-size:13.5px;line-height:1.45;color:rgba(253,242,245,.82)}
+.wtbar{display:flex;align-items:center;gap:14px;margin-top:16px}
+.wtpp{flex:none;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.06);display:grid;place-items:center;cursor:pointer}
+.wtpp span{width:12px;height:14px;border-left:4px solid #fff;border-right:4px solid #fff}
+.wt.paused .wtpp span{width:0;height:0;border:0;border-left:13px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:4px}
+.wtsegs{flex:1;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.wtseg{background:none;border:0;padding:0;cursor:pointer;text-align:left;color:var(--mut);display:flex;flex-direction:column;gap:8px}
+.wtseg i{display:block;height:3px;border-radius:3px;background:rgba(255,255,255,.14);position:relative;overflow:hidden}
+.wtseg i::after{content:"";position:absolute;inset:0;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--petal),var(--hot))}
+.wtseg.done i::after{transform:scaleX(1)}
+.wtseg.on i::after{animation:wtfill 6s linear forwards}
+.wt.paused .wtseg.on i::after{animation-play-state:paused}
+@keyframes wtfill{to{transform:scaleX(1)}}
+.wtseg span{font:500 12.5px Inter}
+.wtseg.on span{color:#fff}
+@media(max-width:760px){.wtapp .bbar{flex-wrap:nowrap;padding:10px 14px}.wtapp .bbar span{display:none}.wtlive{font-size:10.5px}.wtpin{display:none}.wtcall{left:10px!important;right:10px;top:auto!important;bottom:10px;max-width:none;padding:11px 13px;gap:10px;border-radius:14px}.wtcall b{font-size:14.5px;margin-bottom:2px}.wtcall p{font-size:12px}.wtnum{font-size:11px;padding:4px 6px}.wtsegs span{display:none}.wtstage{aspect-ratio:4/3}}
+/* depth pass */
+.grain{position:fixed;inset:-50%;z-index:150;pointer-events:none;opacity:.07;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+.orbs{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
+.orbs i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.55;will-change:transform}
+.orbs i:nth-child(1){width:46vw;height:46vw;left:-12vw;top:10vh;background:radial-gradient(circle,#d81b6a,transparent 65%);animation:orb1 26s ease-in-out infinite alternate}
+.orbs i:nth-child(2){width:40vw;height:40vw;right:-10vw;top:40vh;background:radial-gradient(circle,#ff3d8b,transparent 65%);opacity:.35;animation:orb2 32s ease-in-out infinite alternate}
+.orbs i:nth-child(3){width:30vw;height:30vw;left:35vw;bottom:-10vh;background:radial-gradient(circle,#7d1440,transparent 65%);animation:orb1 38s ease-in-out infinite alternate-reverse}
+@keyframes orb1{to{transform:translate(18vw,14vh) scale(1.15)}}
+@keyframes orb2{to{transform:translate(-16vw,-18vh) scale(.9)}}
+.tilt3d{transition:transform .5s cubic-bezier(.2,.8,.2,1);transform-style:preserve-3d;will-change:transform}
+@media(prefers-reduced-motion:reduce){.grain,.orbs i{animation:none}}
 </style>
 </head>
 <body>
@@ -1342,12 +1391,14 @@ h2.grad:not(.wdin){opacity:.001;transform:translateY(.25em)}
 <section class="band" id="studio">
   <div class="wrap">
     <div class="head rv"><div><span class="eyebrow"><i></i>OTT Studio, designed and built by me</span><h2 class="grad" style="margin-top:14px">AI tools</h2></div><p class="whyp lead"><b>Why I built it.</b> None of the marketing tools out there did everything I needed, and juggling a stack of apps still left gaps. I love how the Apple ecosystem just works, with everything connected in one place, and I wanted that for marketing: <em>one tool where I can see everything, live.</em> So I designed and built it myself.</p></div>
-    <div class="sgrid">
-      <div class="tabs" id="tabs" role="tablist" aria-label="OTT Studio screens"></div>
-      <div class="app glass" id="app">
-        <div class="bbar"><i></i><i></i><i></i><span>experienceott.github.io/marketing</span></div>
-        <div class="screens" id="screens"></div>
+    <div class="wt rv" id="wt">
+      <div class="wtapp">
+        <div class="bbar"><i></i><i></i><i></i><span>experienceott.github.io/marketing</span><b class="wtlive"><em></em>Walkthrough</b></div>
+        <div class="wtstage" id="wtstage"></div>
+        <div class="wtcall" id="wtcall" role="status" aria-live="polite"><span class="wtnum" id="wtnum">01</span><div><b id="wtt"></b><p id="wtd"></p></div></div>
+        <span class="wtpin" id="wtpin" aria-hidden="true"></span>
       </div>
+      <div class="wtbar"><button class="wtpp" id="wtpp" aria-label="Pause walkthrough"><span></span></button><div class="wtsegs" id="wtsegs"></div></div>
     </div>
     <p class="note" style="padding:14px 0 0">Preview mode, figures blurred.</p>
     <div class="abuild">
@@ -1564,16 +1615,22 @@ const ST=[
  ['partners','Brand partners','A searchable sponsor directory sorted by category, ready for pitches.','shots/st_partners.jpg'],
  ['calendar','Calendar','One shared calendar for events, gigs, meetings, time off and deliveries.','shots/st_calendar.jpg']
 ];
-const tabs=document.getElementById('tabs'),scr=document.getElementById('screens');
-tabs.innerHTML=ST.map((t,i)=>'<button class="tab'+(i?'':' on')+'" role="tab" aria-selected="'+(i?'false':'true')+'" data-i="'+i+'"><b>'+t[1]+'</b><p>'+t[2]+'</p><span class="pg"></span></button>').join('');
-scr.innerHTML=ST.map((t,i)=>'<img src="'+t[3]+'" alt="OTT Studio '+t[1]+' screen" class="'+(i?'':'on')+'"'+(i?' loading="lazy"':'')+'>').join('');
-const tbs=[...tabs.children],ims=[...scr.children];let cur_s=0;
-const show=i=>{cur_s=(i+ST.length)%ST.length;tbs.forEach((b,j)=>{b.classList.toggle('on',j===cur_s);b.setAttribute('aria-selected',j===cur_s);const p=b.querySelector('.pg');p.style.animation='none';p.offsetWidth;p.style.animation='';});ims.forEach((im,j)=>im.classList.toggle('on',j===cur_s));};
-tbs.forEach((b,i)=>{b.addEventListener('click',()=>show(i));b.querySelector('.pg').addEventListener('animationend',()=>{if(b.classList.contains('on'))show(cur_s+1);});});
-const studio=document.getElementById('studio');
-studio.addEventListener('pointerenter',()=>tabs.classList.add('paused'));studio.addEventListener('pointerleave',()=>tabs.classList.remove('paused'));
-if(rm)tabs.classList.add('paused');
-const sio=new IntersectionObserver(es=>es.forEach(e=>{if(!rm)tabs.classList.toggle('paused',!e.isIntersecting);}),{threshold:.3});sio.observe(studio);
+const HS=[[30,32],[58,38],[38,44],[52,42],[46,40],[50,46],[52,48]];
+const wst=document.getElementById('wtstage'),wsg=document.getElementById('wtsegs'),wcall=document.getElementById('wtcall'),wpin=document.getElementById('wtpin'),wpp=document.getElementById('wtpp');
+wst.innerHTML=ST.map((t,i)=>'<img src="'+t[3]+'" alt="OTT Studio '+t[1]+' screen"'+(i?' loading="lazy"':'')+' style="transform-origin:'+HS[i][0]+'% '+HS[i][1]+'%">').join('');
+wsg.innerHTML=ST.map((t,i)=>'<button class="wtseg" data-i="'+i+'" aria-label="'+t[1]+'"><i></i><span>'+t[1]+'</span></button>').join('');
+const wims=[...wst.children],wsgs=[...wsg.children];let wi=0,wpause=rm,wtimer=null,wstart=0,wleft=6000;const WD=6000;
+const wshow=i=>{wi=(i+ST.length)%ST.length;wims.forEach((im,j)=>im.classList.toggle('on',j===wi));wsgs.forEach((b,j)=>{b.classList.toggle('on',j===wi);b.classList.toggle('done',j<wi);const f=b.querySelector('i');f.style.animation='none';f.offsetWidth;f.style.animation='';});
+ wcall.classList.remove('in');wpin.classList.remove('in');setTimeout(()=>{document.getElementById('wtnum').textContent=String(wi+1).padStart(2,'0');document.getElementById('wtt').textContent=ST[wi][1];document.getElementById('wtd').textContent=ST[wi][2];
+ const [x,y]=HS[wi];wpin.style.left=x+'%';wpin.style.top='calc('+y+'% + 40px)';wcall.style.left=Math.min(x+3,58)+'%';wcall.style.top='calc('+Math.min(y+8,62)+'% + 40px)';wpin.classList.add('in');setTimeout(()=>wcall.classList.add('in'),250);},700);
+ clearTimeout(wtimer);wleft=WD;wstart=Date.now();if(!wpause)wtimer=setTimeout(()=>wshow(wi+1),WD);};
+wsgs.forEach((b,i)=>b.addEventListener('click',()=>wshow(i)));
+const wsetp=p=>{wpause=p;document.getElementById('wt').classList.toggle('paused',p);wpp.setAttribute('aria-label',p?'Play walkthrough':'Pause walkthrough');if(p){clearTimeout(wtimer);wleft-=Date.now()-wstart;}else{wstart=Date.now();wtimer=setTimeout(()=>wshow(wi+1),Math.max(400,wleft));}};
+wpp.addEventListener('click',()=>wsetp(!wpause));
+const studio=document.getElementById('studio');let wseen=false;
+const sio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting&&!wseen){wseen=true;wshow(0);}else if(!rm&&wseen){if(!e.isIntersecting&&!wpause)wsetp(true);else if(e.isIntersecting&&wpause&&!document.getElementById('wt').dataset.user)wsetp(false);}}),{threshold:.35});sio.observe(studio);
+wpp.addEventListener('click',()=>{document.getElementById('wt').dataset.user=wpause?'1':'';});
+if(rm){document.getElementById('wt').classList.add('paused');}
 
 // about words
 const st=document.getElementById('state');const ws=[];if(!st){}
@@ -1668,6 +1725,11 @@ const bar=document.createElement('div');bar.className='sprog';document.body.appe
 let t=false;addEventListener('scroll',()=>{if(t)return;t=true;requestAnimationFrame(()=>{t=false;const h=document.documentElement;bar.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-innerHeight)).toFixed(4)+')';});},{passive:true});
 if(fine){document.addEventListener('pointermove',e=>{const g=e.target.closest&&e.target.closest('.glass');if(!g)return;const r=g.getBoundingClientRect();g.style.setProperty('--mx',(e.clientX-r.left)+'px');g.style.setProperty('--my',(e.clientY-r.top)+'px');},{passive:true});
 if(!rm)document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18).toFixed(1)+'px,'+((e.clientY-r.top-r.height/2)*.25).toFixed(1)+'px)';});b.addEventListener('pointerleave',()=>{b.style.transform='';});});}
+})()</script>
+<script>(()=>{const rm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine)').matches;
+const g=document.createElement('div');g.className='grain';g.setAttribute('aria-hidden','true');document.body.appendChild(g);
+const o=document.createElement('div');o.className='orbs';o.setAttribute('aria-hidden','true');o.innerHTML='<i></i><i></i><i></i>';document.body.prepend(o);
+if(fine&&!rm)document.querySelectorAll('.rm,.tth,.bs,.pc,.crs,.sx,.bfl').forEach(c=>{c.classList.add('tilt3d');c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect();const dx=(e.clientX-r.left)/r.width-.5,dy=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(900px) rotateY('+(dx*9).toFixed(2)+'deg) rotateX('+(-dy*9).toFixed(2)+'deg) translateZ(6px)';});c.addEventListener('pointerleave',()=>{c.style.transform='';});});
 })()</script>
 </body>
 </html>
